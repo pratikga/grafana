@@ -21,7 +21,7 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == system
 	CMD [ "/usr/sbin/init" ]
 
 #Update the repository and install dependencies:
-#RUN yum -y update
+RUN yum -y update
 RUN yum -y install epel-release \
 	java \
 	telnet \

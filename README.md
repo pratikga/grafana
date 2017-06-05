@@ -20,6 +20,6 @@ sudo systemctl start docker
 
 ```
 docker build --rm -t grafana .
-docker run -d --privileged grafana
+docker run -d  -p 9999:3000 --privileged grafana
 docker exec -it container_id /bin/bash
 ```

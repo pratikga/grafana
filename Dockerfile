@@ -69,4 +69,5 @@ RUN yum -y localinstall grafana-2.6.0-1.x86_64.rpm
 RUN mv /etc/grafana/grafana.ini /etc/grafana/grafana.ini.orig
 ADD grafana.ini /etc/grafana/grafana.ini
 EXPOSE 3000
-RUN chown root:grafana /etc/grafana/grafana.ini 
+RUN chown root:grafana /etc/grafana/grafana.ini
+RUN systemctl start grafana-server
